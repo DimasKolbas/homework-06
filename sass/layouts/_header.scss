@@ -1,0 +1,61 @@
+.header {
+  min-width: 1600px;
+  margin: 0 auto;
+}
+
+.header-contacts {
+  margin: 32px auto;
+  display: flex;
+
+  &__item:first-child {
+    margin-right: 30px;
+  }
+
+  &__mail {
+    width: 161px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14px;
+    letter-spacing: 0.02px;
+    color: var(--secondary-color);
+  }
+
+  &__mail-icon {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+  }
+
+  &__tel {
+    width: 142px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14px;
+    letter-spacing: 0.02px;
+    color: var(--secondary-color);
+  }
+
+  &__tel-icon {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+  }
+
+  &__item:hover &__mail {
+    color: var(--hover-color);
+  }
+
+  &__item:hover,
+  :focus &__mail-icon {
+    fill: var(--hover-color);
+  }
+
+  &__item:hover &__tel {
+    color: var(--hover-color);
+  }
+
+  &__item:hover,
+  :focus &__tel-icon {
+    fill: var(--hover-color);
+  }
+}

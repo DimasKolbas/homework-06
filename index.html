@@ -18,44 +18,48 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
     <!-- *HEADER SECTION*-->
-    <header class="header-section">
-      <div class="header-box container">
-        <a href="./index.html" class="header-logo link"
-          >Web<span class="header-logo-piece">Studio</span></a
+    <header class="header">
+      <div class="container">
+        <a href="./index.html" class="logo header__logo link"
+          >Web<span class="logo--black">Studio</span></a
         >
-        <nav class="header-navigation">
-          <ul class="header-list">
-            <li class="header-list-item link">
-              <a href="./index.html" class="header-pages link">Студия</a>
+
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item link">
+              <a href="./index.html" class="navigation__page link">Студия</a>
             </li>
 
-            <li class="header-list-item link">
-              <a href="./portfolio.html" class="header-pages link">Портфолио</a>
+            <li class="navigation__item link">
+              <a href="./portfolio.html" class="navigation__page link">Портфолио</a>
             </li>
 
-            <li class="header-list-item link">
-              <a href="" class="header-pages link">Контакты</a>
+            <li class="navigation__item link">
+              <a href="" class="navigation__page link">Контакты</a>
             </li>
           </ul>
         </nav>
-        <ul class="header-contacts-list link">
-          <li class="header-contacts-list-item">
-            <svg class="header-mail-icon">
+
+        <ul class="header-contacts link">
+          <li class="header-contacts__item">
+            <svg class="header-contacts__mail-icon">
               <use href="images/svg/symbol-defs.svg#icon-envelope"></use>
             </svg>
-            <a href="mailto:info@devstudio.com" class="header-mail link">info@devstudio.com</a>
+            <a href="mailto:info@devstudio.com" class="header-contacts__mail link"
+              >info@devstudio.com</a
+            >
           </li>
 
-          <li class="header-contacts-list-item">
-            <svg class="header-tel-icon">
+          <li class="header-contacts__item">
+            <svg class="header-contacts__tel-icon">
               <use href="images/svg/symbol-defs.svg#icon-smartphone"></use>
             </svg>
-            <a href="tel:+380961111111" class="header-tel link">+38 096 111 11 11</a>
+            <a href="tel:+380961111111" class="header-contacts__tel link">+38 096 111 11 11</a>
           </li>
         </ul>
       </div>
@@ -64,62 +68,62 @@
     <!-- *MAIN SECTION -->
     <main>
       <!-- *HERO SECTION* -->
-      <section class="hero-section">
-        <div class="hero-section-content">
-          <h1 class="hero-section-caption">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero-section-button">Заказать услугу</button>
+      <section class="hero">
+        <div class="hero__section">
+          <h1 class="hero__caption">Эффективные решения для вашего бизнеса</h1>
+          <button type="button" class="hero__button">Заказать услугу</button>
         </div>
       </section>
 
       <!-- *BENEFITS SECTION* -->
-      <section class="benefits-section container section">
-        <div class="benefits-section-content">
-          <!-- <h2 class="benefits-caption">Наши преимущества</h2> -->
+      <section class="benefits container section">
+        <div class="benefits__section">
+          <h2 class="visually-hidden">Наши преимущества</h2>
           <ul class="benefits-list">
-            <li class="benefits-list-item link">
-              <div class="benefits-list-icon">
-                <svg class="benefits-icon">
+            <li class="benefits-list__item link">
+              <div class="benefits-list__icon-section">
+                <svg class="benefits-list__icon">
                   <use href="./images/svg/symbol-defs.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h3 class="benefits-item-title">Внимание к деталям</h3>
-              <p class="benefits-item-text">
+              <h3 class="benefits-list__title">Внимание к деталям</h3>
+              <p class="benefits-list__text">
                 Идейные соображения, а также начало повседневной работы по формированию позиции.
               </p>
             </li>
 
-            <li class="benefits-list-item link">
-              <div class="benefits-list-icon">
-                <svg class="benefits-icon">
+            <li class="benefits-list__item link">
+              <div class="benefits-list__icon-section">
+                <svg class="benefits-list__icon">
                   <use href="./images/svg/symbol-defs.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="benefits-item-title">Пунктуальность</h3>
-              <p class="benefits-item-text">
+              <h3 class="benefits-list__title">Пунктуальность</h3>
+              <p class="benefits-list__text">
                 Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
               </p>
             </li>
 
-            <li class="benefits-list-item link">
-              <div class="benefits-list-icon">
-                <svg class="benefits-icon">
+            <li class="benefits-list__item link">
+              <div class="benefits-list__icon-section">
+                <svg class="benefits-list__icon">
                   <use href="./images/svg/symbol-defs.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="benefits-item-title">Планирование</h3>
-              <p class="benefits-item-text">
+              <h3 class="benefits-list__title">Планирование</h3>
+              <p class="benefits-list__text">
                 Равным образом консультация с широким активом в значительной степени обуславливает.
               </p>
             </li>
 
-            <li class="benefits-list-item link">
-              <div class="benefits-list-icon">
-                <svg class="benefits-icon">
+            <li class="benefits-list__item link">
+              <div class="benefits-list__icon-section">
+                <svg class="benefits-list__icon">
                   <use href="./images/svg/symbol-defs.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3 class="benefits-item-title">Современные технологии</h3>
-              <p class="benefits-item-text">
+              <h3 class="benefits-list__title">Современные технологии</h3>
+              <p class="benefits-list__text">
                 Значимость этих проблем настолько очевидна, что реализация плановых заданий.
               </p>
             </li>
@@ -128,12 +132,12 @@
       </section>
 
       <!-- *JOB SECTION* -->
-      <section class="job-section container section">
-        <div class="job-section-content">
-          <h2 class="job-caption">Чем мы занимаемся</h2>
+      <section class="job container section">
+        <div class="job-section">
+          <h2 class="job__caption">Чем мы занимаемся</h2>
           <ul class="job-list">
-            <li class="job-list-item link">
-              <div class="job-section-image">
+            <li class="job-list__item link">
+              <div class="job-list__image">
                 <img
                   src="./images/index/box1.jpg"
                   width="370"
@@ -141,36 +145,36 @@
                   alt="Мужчина работает с
               планшетом"
                 />
-                <div class="job-section-overlay">
-                  <h3 class="job-section-overlay-title">Десктопные приложения</h3>
+                <div class="job-list__overlay">
+                  <h3 class="job-list__overlay-title">Десктопные приложения</h3>
                 </div>
               </div>
             </li>
 
-            <li class="job-list-item link">
-              <div class="job-section-image">
+            <li class="job-list__item link">
+              <div class="job-list__image">
                 <img
                   src="./images/index/box2.jpg"
                   width="370"
                   height="294"
                   alt="Девушка с ноутбуком и телефоном"
                 />
-                <div class="job-section-overlay">
-                  <h3 class="job-section-overlay-title">Мобильные приложения</h3>
+                <div class="job-list__overlay">
+                  <h3 class="job-list__overlay-title">Мобильные приложения</h3>
                 </div>
               </div>
             </li>
 
-            <li class="job-list-item link">
-              <div class="job-section-image">
+            <li class="job-list__item link">
+              <div class="job-list__image">
                 <img
                   src="./images/index/box3.jpg"
                   width="370"
                   height="294"
                   alt="Человек держит в руках планшет"
                 />
-                <div class="job-section-overlay">
-                  <h3 class="job-section-overlay-title">Дизайнерские решения</h3>
+                <div class="job-list__overlay">
+                  <h3 class="job-list__overlay-title">Дизайнерские решения</h3>
                 </div>
               </div>
             </li>
@@ -377,7 +381,7 @@
     <footer class="footer-section">
       <div class="footer-section-content container">
         <div class="footer-section-contacts">
-          <p class="footer-logo">Web<span class="footer-logo-piece">Studio</span></p>
+          <p class="logo footer__logo">Web<span class="logo--light">Studio</span></p>
           <address class="footer-adress">
             <p class="footer-adress-text">г. Киев, пр-т Леси Украинки, 26</p>
             <p class="footer-adress-text">info@example.com</p>

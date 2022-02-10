@@ -1,1 +1,339 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+:root {
+  --main-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+  --accent-color: #212121;
+  --secondary-color: #757575;
+  --light-color: #ffffff;
+  --hover-color: #2196f3;
+  --button-color: #f5f4fa;
+  --footer-color: #2f303a;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+a,
+img,
+div,
+button,
+svg {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  list-style: none;
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* outline: 2px solid tomato; */
+}
+
+.section {
+  margin: 94px auto 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font), var(--secondary-font);
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: 0.03px;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.header {
+  min-width: 1600px;
+  margin: 0 auto;
+}
+
+.header-contacts {
+  margin: 32px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-contacts__item:first-child {
+  margin-right: 30px;
+}
+
+.header-contacts__mail {
+  width: 161px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.02px;
+  color: var(--secondary-color);
+}
+
+.header-contacts__mail-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.header-contacts__tel {
+  width: 142px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.02px;
+  color: var(--secondary-color);
+}
+
+.header-contacts__tel-icon {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.header-contacts__item:hover .header-contacts__mail {
+  color: var(--hover-color);
+}
+
+.header-contacts__item:hover,
+:focus .header-contacts__mail-icon {
+  fill: var(--hover-color);
+}
+
+.header-contacts__item:hover .header-contacts__tel {
+  color: var(--hover-color);
+}
+
+.header-contacts__item:hover,
+:focus .header-contacts__tel-icon {
+  fill: var(--hover-color);
+}
+
+.header__logo {
+  margin: 24px 93px 25px 0;
+}
+
+.logo {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19px;
+  color: var(--hover-color);
+}
+
+.logo--black {
+  color: #000000;
+}
+
+.navigation {
+  margin: 32px 305px 0 0;
+}
+
+.navigation .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  height: 48px;
+}
+
+.navigation__item {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.navigation__page {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.02px;
+  color: var(--accent-color);
+}
+
+.navigation__page:hover, .navigation__page:focus {
+  color: var(--hover-color);
+}
+
+.navigation__item .navigation__page:hover::before,
+.navigation__item .navigation__page:focus::before, .navigation__item:active {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 4px;
+  background: var(--hover-color);
+  border-radius: 2px;
+}
+
+.hero {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.hero__section {
+  padding: 200px 452px 200px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/index/hero.jpg");
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index/hero.jpg");
+}
+
+.hero__caption {
+  width: 696px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36em;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--light-color);
+}
+
+.hero__button {
+  margin-top: 30px;
+  padding: 10px 32px;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1.87em;
+  letter-spacing: 0.06em;
+  color: var(--light-color);
+  background-color: var(--hover-color);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.hero__button:hover, .hero__button:focus {
+  background-color: #188ce8;
+}
+
+.benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.benefits-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.benefits-list__item {
+  width: 270px;
+}
+
+.benefits-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.benefits-list__title {
+  margin: 30px 0 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.benefits-list__text {
+  font-size: 14px;
+  line-height: 1.71em;
+  color: var(--secondary-color);
+}
+
+.benefits-list__icon-section {
+  width: 270px;
+  height: 120px;
+  background-color: var(--button-color);
+  border-radius: 4px;
+}
+
+.benefits-list__icon {
+  margin: 25px 100px;
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+}
+
+.job__caption {
+  margin-bottom: 50px;
+}
+
+.job-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.job-list__item {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17em;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.job-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.job-list__image {
+  position: relative;
+}
+
+.job-list__overlay {
+  position: absolute;
+  padding: 27px 82px;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.job-list__overlay-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--light-color);
+}
+/*# sourceMappingURL=main.css.map */
