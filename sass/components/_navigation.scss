@@ -1,23 +1,23 @@
 .navigation {
   margin: 32px 305px 0 0;
 
-  .list {
+  &__list {
     display: flex;
     padding: 0;
     height: 48px;
   }
 
-  &__item {
+  &__list-item {
     position: relative;
     padding: 0;
     margin: 0;
   }
 
-  &__item:not(:last-child) {
+  &__list-item:not(:last-child) {
     margin-right: 50px;
   }
 
-  &__page {
+  &__list-page {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14px;
@@ -25,14 +25,12 @@
     color: var(--accent-color);
   }
 
-  &__page:hover,
-  &__page:focus {
+  &__list-page:hover,
+  &__list-page:focus {
     color: var(--hover-color);
   }
 
-  &__item &__page:hover::before,
-  &__item &__page:focus::before,
-  &__item:active {
+  &__list-page::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -40,5 +38,11 @@
     height: 4px;
     background: var(--hover-color);
     border-radius: 2px;
+    opacity: 0;
+  }
+
+  &__list-page:hover::before,
+  &__list-page:focus::before {
+    opacity: 1;
   }
 }

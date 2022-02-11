@@ -41,21 +41,21 @@
     margin-right: 10px;
   }
 
-  &__item:hover &__mail {
+  &__item:hover &__mail,
+  &__item &__mail:focus {
     color: var(--hover-color);
   }
 
-  &__item:hover,
-  :focus &__mail-icon {
+  &__item:hover &__mail-icon {
     fill: var(--hover-color);
   }
 
-  &__item:hover &__tel {
+  &__item:hover &__tel,
+  &__item &__tel:focus {
     color: var(--hover-color);
   }
 
-  &__item:hover,
-  :focus &__tel-icon {
+  &__item:hover &__tel-icon {
     fill: var(--hover-color);
   }
 }

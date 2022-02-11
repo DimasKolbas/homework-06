@@ -1,9 +1,12 @@
 //basic-settings
-@import 'utils/_variable';
+@import 'base/_variable';
 @import 'utils/_visually-hidden';
 @import 'base/_basic-settings';
 @import 'base/_container';
 @import 'base/_body';
+@import 'components/button';
+@import 'components/icon-list';
+
 // header-section
 @import 'layouts/_header';
 @import 'components/_logo';
@@ -14,3 +17,16 @@
 @import 'layouts/benefits';
 // job-section
 @import 'layouts/job';
+// command-section
+@import 'layouts/command';
+// costomers-section
+@import 'layouts/costomers';
+// footer-section
+@import 'layouts/footer';
+
+// PORTFOLIO-PAGE!!!
+// menu-section
+@import 'components/menu';
+@import 'components/button-menu';
+// portfolio-section
+@import 'layouts/portfolio';
