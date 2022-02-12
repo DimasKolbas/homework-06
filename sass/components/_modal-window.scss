@@ -1,14 +1,16 @@
-/* Задний фон */
+// Задний фон модального окна
 .backdrop {
   position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* Модальное окно */
-.modal-window {
+// Модальное окно
+.modal-section {
   position: fixed;
   top: 221px;
   left: 50%;
@@ -16,186 +18,155 @@
   padding: 40px;
   width: 528px;
   height: 581px;
-  background: #ffffff;
+  background: var(--light-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  // Заголовок модального окна
+  &__title {
+    padding: 0 3px 0 3px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15em;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+  }
 }
 
-/* Кнопка "Закрыть" */
-.modal-window-close {
-  position: absolute;
-  top: 8px;
-  left: 490px;
-  width: 30px;
-  height: 30px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.modal-window-close:hover {
-  fill: var(--hover-color);
-}
-
-.modal-window-close-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 18px;
-  height: 18px;
-  color: #000000;
-}
-
-/* Заголовок */
-.modal-title {
-  padding: 0 3px 0 3px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15em;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--accent-color);
-}
-
-/* Форма для введения значений */
-.modal-section {
+// Форма модального окна
+.modal {
   margin-top: 12px;
   padding: 0;
+
+  &__list {
+    list-style: none;
+    text-align: left;
+  }
+
+  &__list-item {
+    margin-bottom: 10px;
+    width: 448px;
+  }
+
+  &__list-item:nth-child(4n) .modal-input {
+    padding-left: 16px;
+    height: 120px;
+    resize: none;
+  }
+
+  //Заголовок секций формы
+  &__subtitle {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.16em;
+    letter-spacing: 0.01em;
+    color: var(--secondary-color);
+  }
+
+  //Секция списка формы
+  &__label {
+    position: relative;
+  }
+
+  &__label:hover .modal-section-icon {
+    fill: #2196f3;
+  }
+
+  &__label:focus {
+    border: 1px solid #2196f3;
+  }
+
+  &__label:focus-within .modal-section-icon {
+    fill: #2196f3;
+  }
+
+  &__label:hover .modal-input {
+    border: 1px solid #2196f3;
+  }
+
+  //Строка ввода значений в форму
+  &__input {
+    box-sizing: border-box;
+    padding: 11px 12px 11px 42px;
+    width: 448px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 1.16em;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__input:placeholder-shown .modal-label {
+    color: var(--hover-color);
+  }
+
+  &__input-textarea {
+    padding: 12px 16px;
+    height: 120px;
+    resize: none;
+  }
+
+  //Иконка секции списка
+  &__icon {
+    position: absolute;
+    top: 10%;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
-/* Список формы */
-.modal-list {
-  list-style: none;
-  text-align: left;
-}
+//Соглашение и подпись
+.signature {
+  margin-bottom: 30px;
 
-.modal-list-item {
-  margin-bottom: 10px;
-  width: 448px;
-}
+  &__checkbox {
+    margin-right: 7px;
+    opacity: 0;
+  }
 
-.modal-list-item:nth-child(4n) .modal-input {
-  padding-left: 16px;
-  height: 120px;
-  resize: none;
-}
+  &__agreement {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.71em;
+    letter-spacing: 0.03em;
+    color: var(--secondary-color);
+  }
 
-/* Заголовок секций */
-.modal-list-topic {
-  margin-bottom: 4px;
-  font-size: 12px;
-  line-height: 1.16em;
-  letter-spacing: 0.01em;
-  color: var(--secondary-color);
-}
+  &__title {
+    font-size: 14px;
+    line-height: 1.71em;
+    color: var(--secondary-color);
+  }
 
-/* Секция списка */
-.modal-label {
-  position: relative;
-}
+  &__checkbox:checked &__icon {
+    background-color: #2196f3;
+  }
 
-.modal-label:hover .modal-section-icon {
-  fill: #2196f3;
-}
+  &__contract {
+    text-decoration-line: underline;
+    color: var(--hover-color);
+  }
 
-.modal-label:focus {
-  border: 1px solid #2196f3;
-}
+  &__icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: -25px;
+  }
 
-.modal-label:focus-within .modal-section-icon {
-  fill: #2196f3;
-}
-
-.modal-input:placeholder-shown .modal-label {
-  color: var(--hover-color);
-}
-
-.modal-label:hover .modal-input {
-  border: 1px solid #2196f3;
-}
-
-/* Строка ввода значений */
-.modal-input {
-  padding: 11px 12px 11px 42px;
-  width: 448px;
-  height: 40px;
-  font-size: 12px;
-  line-height: 1.16em;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* Иконка секции списка */
-.modal-section-icon {
-  position: absolute;
-  top: 10%;
-  left: 12px;
-  width: 18px;
-  height: 18px;
-}
-
-/* Соглашение */
-.modal-agreement-checkbox {
-  margin: 0px 8px 0px 8px;
-  opacity: 0;
-}
-
-.modal-agreement {
-  position: relative;
-  font-size: 14px;
-  line-height: 1.71em;
-  letter-spacing: 0.03em;
-  color: var(--secondary-color);
-}
-
-.modal-agreement-title {
-  font-size: 14px;
-  line-height: 1.71em;
-  color: var(--secondary-color);
-}
-
-.modal-agreement-contract {
-  text-decoration-line: underline;
-  color: var(--hover-color);
-}
-
-/* Checkbox соглашения*/
-.modal-icon-rectangle {
-  position: absolute;
-  width: 16px;
-  height: 15px;
-  top: 0px;
-  left: -25px;
-  fill: var(--accent-color);
-  background-color: var(--light-color);
-}
-
-.modal-agreement:hover .modal-icon-rectangle {
-  fill: var(--hover-color);
-  background-color: var(--hover-color);
-  border-radius: 2px;
-}
-
-.modal-icon-check {
-  position: absolute;
-  width: 11px;
-  height: 12px;
-  top: 2px;
-  left: -22px;
-  fill: var(--light-color);
-}
-
-/* Кпопка "Отправить" */
-.modal-button {
-  margin: 30px 124px 40px;
-  width: 200px;
-  height: 50px;
-  padding: 10px 55px;
-  display: flex;
+  &--check {
+    position: absolute;
+    width: 11px;
+    height: 16px;
+    top: 2px;
+    left: -22px;
+    fill: var(--light-color);
+  }
 }

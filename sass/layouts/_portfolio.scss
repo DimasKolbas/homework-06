@@ -19,6 +19,7 @@
 
   &__item:hover .portfolio-list--hover {
     opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__item:hover {
@@ -54,7 +55,7 @@
     height: 100%;
     top: 0;
     text-align: left;
-    background: rgba(33, 150, 243, 0.9);
+    background-color: rgba(33, 150, 243, 0.9);
     opacity: 0;
   }
 

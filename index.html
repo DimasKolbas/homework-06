@@ -440,72 +440,79 @@
       </div>
     </footer>
 
-    <!-- *MODAL WINDOW*
+    <!-- *MODAL WINDOW* -->
     <div class="backdrop">
-      <div class="modal-window">
-        <div class="modal-window-close">
-          <svg class="modal-window-close-icon">
+      <div class="modal-section">
+        <div class="close">
+          <svg class="close__icon">
             <use href="./images/svg/symbol-defs.svg#icon-close"></use>
           </svg>
         </div>
-        <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
-        <form class="modal-section">
-          <ul class="modal-list">
-            <li class="modal-list-item">
-              <p class="modal-list-topic">Имя</p>
-              <label class="modal-label">
-                <input class="modal-input" type="text" placeholder=" " />
-                <svg class="modal-section-icon">
+
+        <b class="modal-section__title">Оставьте свои данные, мы вам перезвоним</b>
+        <form class="modal">
+          <ul class="modal__list">
+            <li class="modal__list-item">
+              <p class="modal__subtitle">Имя</p>
+              <label class="modal__label">
+                <input class="modal__input" type="text" placeholder=" " />
+                <svg class="modal__icon">
                   <use href="./images/svg/symbol-defs.svg#icon-person"></use>
                 </svg>
               </label>
             </li>
 
-            <li class="modal-list-item">
-              <p class="modal-list-topic">Телефон</p>
-              <label class="modal-label">
-                <input class="modal-input" type="tel" />
-                <svg class="modal-section-icon">
+            <li class="modal__list-item">
+              <p class="modal__subtitle">Телефон</p>
+              <label class="modal__label">
+                <input class="modal__input" type="tel" />
+                <svg class="modal__icon">
                   <use href="./images/svg/symbol-defs.svg#icon-phone"></use>
                 </svg>
               </label>
             </li>
 
-            <li class="modal-list-item">
-              <p class="modal-list-topic">Почта</p>
-              <label class="modal-label">
-                <input class="modal-input" type="email" />
-                <svg class="modal-section-icon">
+            <li class="modal__list-item">
+              <p class="modal__subtitle">Почта</p>
+              <label class="modal__label">
+                <input class="modal__input" type="email" />
+                <svg class="modal__icon">
                   <use href="./images/svg/symbol-defs.svg#icon-email"></use>
                 </svg>
               </label>
             </li>
 
-            <li class="modal-list-item">
-              <p class="modal-list-topic">Комментарий</p>
-              <label class="modal-label">
-                <textarea class="modal-input" type="text" placeholder="Введите текст"></textarea>
+            <li class="modal__list-item">
+              <p class="modal__subtitle">Комментарий</p>
+              <label class="modal__label">
+                <textarea
+                  class="modal__input modal__input-textarea"
+                  type="text"
+                  placeholder="Введите текст"
+                ></textarea>
               </label>
             </li>
           </ul>
+        </form>
 
-          <input class="modal-agreement-checkbox" type="checkbox" name="checkbox" id="checkbox" />
-          <label for="checkbox" class="modal-agreement">
-            <span class="modal-agreement-title"
+        <div class="signature">
+          <input class="signature__checkbox" type="checkbox" name="checkbox" id="checkbox" />
+          <label class="signature__agreement" for="checkbox">
+            <span class="signature__title"
               >Соглашаюсь с рассылкой и принимаю
-              <span class="modal-agreement-contract">Условия договора</span></span
+              <span class="signature__contract">Условия договора</span></span
             >
-            <svg class="modal-icon-rectangle">
+            <svg class="signature__icon">
               <use href="./images/svg/symbol-defs.svg#icon-rectangle"></use>
             </svg>
-            <svg class="modal-icon-check">
+            <svg class="signature--check">
               <use href="./images/svg/symbol-defs.svg#icon-check"></use>
             </svg>
           </label>
-        </form>
+        </div>
 
-        <button type="submit" class="hero-section-button modal-button">Отправить</button>
+        <button class="button button__text" type="submit">Отправить</button>
       </div>
-    </div> -->
+    </div>
   </body>
 </html>
